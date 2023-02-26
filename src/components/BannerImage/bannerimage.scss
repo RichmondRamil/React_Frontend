@@ -1,0 +1,70 @@
+@use "../../util/" as u;
+.banner {
+  background-color: white;
+
+  height: 250px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+
+    &-image {
+      @include u.breakpoint-down(large) {
+        display: none;
+      }
+      flex: 6;
+      img {
+        width: 100%;
+        height: 250px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+
+        @include u.breakpoint-down(large) {
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 0px;
+          border-top-right-radius: 5px;
+        }
+      }
+    }
+    &-text {
+      flex: 3;
+
+      margin: 20px;
+
+      h2 {
+        color: tomato;
+        font-size: 30px;
+      }
+      h3 {
+        position: relative;
+        span {
+          font-size: 12px;
+          position: absolute;
+          margin-left: 3px;
+          &.gain {
+            color: green;
+          }
+          &.loss {
+            color: red;
+          }
+        }
+      }
+      h2,
+      h3 {
+        margin-bottom: 15px;
+      }
+      p {
+        margin-bottom: 30px;
+      }
+      button {
+        padding: 10px 15px;
+        border: none;
+        background-color: #67c24342;
+        color: #37c400;
+        border-radius: 3px;
+      }
+    }
+  }
+}

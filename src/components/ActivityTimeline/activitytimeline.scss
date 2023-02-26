@@ -1,0 +1,45 @@
+@use "../../util/" as u;
+.activity-timeline {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 5px;
+
+  .activity-timeline__container {
+    padding: 20px;
+    h2 {
+      margin-bottom: 25px;
+    }
+    @include u.breakpoint-down(xlarge) {
+      padding: 10px;
+    }
+    @include u.breakpoint-down(laptop) {
+      padding: 16px;
+    }
+
+    .timeline {
+      .MuiTimelineDot-filledError {
+        box-shadow: rgb(255 76 81 / 12%) 0px 0px 0px 3px;
+      }
+      .MuiTimelineDot-filledSecondary {
+        box-shadow: rgba(234, 76, 255, 0.12) 0px 0px 0px 3px;
+      }
+      .MuiTimelineDot-filledPrimary {
+        box-shadow: rgba(121, 154, 245, 0.12) 0px 0px 0px 3px;
+      }
+      .MuiTimelineDot-filledWarning {
+        box-shadow: rgba(245, 177, 121, 0.12) 0px 0px 0px 3px;
+      }
+
+      .title-flex {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+          font-size: 12px;
+          color: #bdbcbe;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

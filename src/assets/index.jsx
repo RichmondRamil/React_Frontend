@@ -1,0 +1,13 @@
+export { default as Conure } from "./banner-bird.png";
+export { default as Cockateil } from "./cockateil.png";
+export { default as Facebook } from "./facebook.png";
+export { default as Twitter } from "./twitter.png";
+export { default as Instagram } from "./instagram.png";
+export { default as Tiktok } from "./tiktok.png";
+export { default as Person1 } from "./Person1.jpg";
+export { default as Person2 } from "./Person2.jpg";
+export { default as Person3 } from "./Person3.jpg";
+export { default as Person4 } from "./Person4.jpg";
+export { default as Person5 } from "./Person5.jpg";
+export { default as Person6 } from "./Person6.jpg";
+export { default as Tick } from "./Tick.png";

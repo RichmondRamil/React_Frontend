@@ -1,0 +1,14 @@
+.App {
+  display: flex;
+  color: #58545e;
+  .page {
+    overflow-y: scroll;
+    flex: 6;
+    height: 100vh;
+    background-color: #f4f5fa;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

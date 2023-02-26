@@ -1,0 +1,106 @@
+@use "../../util/" as u;
+.social {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 5px;
+  height: 200px;
+  @include u.breakpoint-down(laptop) {
+    width: 450px;
+  }
+  @include u.breakpoint-down(tablet) {
+    width: 355px;
+  }
+  @include u.breakpoint-down(large) {
+    width: 385px;
+  }
+  @include u.breakpoint-down(medium) {
+    width: 335px;
+  }
+  @include u.breakpoint-down(small) {
+    width: 280px;
+    height: 320px;
+  }
+  &__container {
+    display: flex;
+    padding: 25px;
+    @include u.breakpoint-down(small) {
+      flex-direction: column;
+    }
+
+    &-text {
+      flex: 1;
+
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      @include u.breakpoint-down(small) {
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      h2 {
+        position: relative;
+        span {
+          font-size: 12px;
+          position: absolute;
+          margin-left: 3px;
+
+          &.gain {
+            color: green;
+          }
+          &.loss {
+            color: red;
+          }
+        }
+      }
+
+      p {
+        text-align: center;
+        padding: 3px;
+        max-width: 140px;
+        border-radius: 10px;
+
+        &.facebook {
+          background-color: #0085fa8f;
+          color: white;
+        }
+        &.twitter {
+          background-color: #00ecf4c9;
+          color: white;
+        }
+        &.instagram {
+          background-color: #ff0000ab;
+          color: white;
+        }
+        &.tiktok {
+          background-color: #36363694;
+          color: white;
+        }
+      }
+    }
+    &-image {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      flex: 1;
+    }
+    // @include u.breakpoint-down(small) {
+    //   justify-content: center;
+    //   align-items: center;
+    // }
+    img {
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .profile-name {
+      text-align: center;
+
+      p {
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

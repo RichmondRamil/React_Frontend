@@ -1,0 +1,100 @@
+@use "../../util/" as u;
+.search__links {
+  width: 600px;
+  height: 400px;
+  background-color: green;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 5px;
+  z-index: 1;
+  @include u.breakpoint-down(large) {
+    width: 350px;
+  }
+  @include u.breakpoint-down(medium) {
+    width: 300px;
+  }
+  @include u.breakpoint-down(small) {
+    width: 280px;
+  }
+
+  .search__links_container {
+    .search__links_container-input {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.308);
+      padding: 20px;
+      label {
+        text-align: center;
+        flex: 2;
+        @include u.breakpoint-down(large) {
+          display: none;
+        }
+      }
+      input {
+        flex: 8;
+        padding: 10px 15px;
+        border-radius: 3px;
+        border: 1px solid rgba(128, 128, 128, 0.342);
+      }
+      .close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+
+        .close-icon {
+          font-size: 30px;
+          cursor: pointer;
+
+          &:hover {
+            color: tomato;
+          }
+        }
+      }
+    }
+  }
+
+  .search__links_container-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        margin: 22px;
+        padding: 5px 0px 5px 0px;
+        transition: all 0.2s ease-in-out;
+        border-radius: 3px;
+        &:hover {
+          background-color: #58545e2f;
+          padding: 5px 5px 5px 5px;
+        }
+        a {
+          text-decoration: none;
+          color: #58545e;
+        }
+
+        @include u.breakpoint-down(large) {
+          margin: 8px;
+        }
+      }
+      .search-icon {
+        margin-right: 5px;
+      }
+    }
+  }
+}

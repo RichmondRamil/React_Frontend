@@ -1,0 +1,9 @@
+.home {
+  &__container {
+    padding: 20px;
+    .home__container-grid {
+      background-color: red;
+      gap: 5px;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@use "../../util/" as u;
+.web-stat {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 5px;
+
+  &__container {
+    padding: 21px;
+    @include u.breakpoint-down(laptop) {
+      padding: 17px;
+    }
+    &-total {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.349);
+      @include u.breakpoint-down(laptop) {
+        justify-content: center;
+      }
+      &_number {
+        flex-direction: column;
+        @include u.breakpoint-down(medium) {
+          padding: 20px;
+        }
+        h1 {
+          font-size: 38px;
+        }
+        p {
+          font-size: 14px;
+          font-weight: 300;
+          color: rgba(128, 128, 128, 0.541);
+        }
+      }
+      &_graph {
+        @include u.breakpoint-down(medium) {
+          display: none;
+        }
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    &-items {
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      padding: 11px;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.349);
+      &-circles {
+        flex: 1;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div {
+          &.direct {
+            margin-right: 5px;
+            background-color: #56ca00;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+          }
+          &.organic {
+            margin-right: 5px;
+            background-color: #9155fd;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+          }
+          &.referral {
+            margin-right: 5px;
+            background-color: #ffb400;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+          }
+          &.social {
+            margin-right: 5px;
+            background-color: #8a8d93;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+          }
+        }
+      }
+      &-price {
+        flex: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &-percent {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .arrUp {
+          color: #56ca00;
+        }
+        .arrDown {
+          color: tomato;
+        }
+      }
+    }
+  }
+}

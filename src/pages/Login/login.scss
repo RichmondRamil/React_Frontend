@@ -1,0 +1,140 @@
+@use "../../util/" as u;
+.login-container {
+  color: rgb(129, 129, 129);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  min-height: 100vh;
+  background-image: url("../../assets/FormBG.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  section {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
+    @include u.breakpoint-down(large) {
+      width: 350px;
+    }
+    @include u.breakpoint-down(medium) {
+      width: 320px;
+    }
+    @include u.breakpoint-down(small) {
+      width: 280px;
+    }
+    .register-title {
+      padding: 7px;
+      h1 {
+        margin-bottom: 15px;
+      }
+      p {
+        span {
+          margin-left: 5px;
+          a {
+            text-decoration: none;
+            color: #5551ff;
+          }
+        }
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      flex-grow: 1;
+      padding-bottom: 1rem;
+      a,
+      a:visited {
+        color: rgb(69, 184, 212);
+      }
+      .input {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 5px;
+        border: 1px solid rgba(128, 128, 128, 0.212);
+        border-radius: 3px;
+
+        input[type="text"],
+        input[type="password"],
+        button,
+        textarea {
+          font-family: "Nunito", sans-serif;
+          font-size: 16px;
+          padding: 0px 10px 10px 10px;
+          border: none;
+          outline: none;
+        }
+
+        label {
+          font-size: 16px;
+          font-weight: 300;
+          margin: 10px 0px 0px 10px;
+          display: flex;
+        }
+      }
+
+      button {
+        color: white;
+        background-color: #5551ff;
+        border-radius: 3px;
+        border: none;
+        width: 200px;
+        margin-top: 10px;
+        align-self: center;
+        cursor: pointer;
+        padding: 15px 10px;
+      }
+    }
+    .instructions {
+      font-size: 0.75rem;
+      border-radius: 0.5rem;
+      background: tomato;
+      color: #fff;
+      padding: 0.25rem;
+      margin: 10px;
+      bottom: -10px;
+    }
+
+    .instructions > svg {
+      margin-right: 0.25rem;
+    }
+
+    .offscreen {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .valid {
+      color: limegreen;
+      margin-left: 0.25rem;
+    }
+
+    .invalid {
+      color: red;
+      margin-left: 0.25rem;
+    }
+
+    .errmsg {
+      background-color: lightpink;
+      color: firebrick;
+      font-weight: bold;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+      border-radius: 3px;
+    }
+
+    .line {
+      display: inline-block;
+    }
+  }
+}

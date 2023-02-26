@@ -1,0 +1,75 @@
+.meeting {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 5px;
+  &-container {
+    padding: 20px;
+
+    &__items {
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &-profile {
+        display: flex;
+        img {
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          margin-right: 10px;
+        }
+
+        &_desc {
+          p {
+            font-size: 14px;
+            font-weight: bold;
+          }
+          &-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .icon {
+              width: 18px;
+              height: 18px;
+              margin-right: 5px;
+              color: rgba(128, 128, 128, 0.753);
+            }
+            span {
+              font-size: 12px;
+              color: rgba(128, 128, 128, 0.753);
+            }
+          }
+        }
+      }
+      &-status {
+        p {
+          font-size: 12px;
+          padding: 2px 10px;
+          border-radius: 15px;
+
+          &.Business {
+            color: #804bdf;
+            background-color: #7f4bdf57;
+          }
+          &.Meditation {
+            color: #56ca00;
+            background-color: #58ca0027;
+          }
+          &.Dinner {
+            color: #ff4c64;
+            background-color: rgba(255, 76, 142, 0.219);
+          }
+          &.Meetup {
+            color: #8a8d93;
+            background-color: #8a8d933f;
+          }
+          &.Party {
+            color: #ffb400;
+            background-color: #ffb3003a;
+          }
+        }
+      }
+    }
+  }
+}
